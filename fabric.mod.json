@@ -1,0 +1,13 @@
+{
+    "schemaVersion": 1,
+    "authors": [
+        "JU5E"
+    ],
+    "environment": "*",
+    "id": "jhero",
+    "version": "1.0.0",
+    "name": "JU5E's Heroes",
+    "description": "A superhero addon for palladium!",
+    "icon": "logo.png",
+    "license": "All rights reserved"
+}

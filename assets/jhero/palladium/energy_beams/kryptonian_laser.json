@@ -1,0 +1,94 @@
+[
+    {
+        "type": "palladium:laser",
+        "body_part": "head",
+        "glow_color": "#EE1212",
+        "core_color": "#ffffff",
+        "rainbow": false,
+        "glow_opacity": 1,
+        "core_opacity": 1,
+        "bloom": 2,
+        "size": 1,
+        "normal_transparency": false,
+        "rotation": 0,
+        "rotation_speed": 0,
+        "visibility": {
+            "first_person": false,
+            "third_person": true
+        },
+        "offset": [
+            2,
+            4,
+            0
+        ]
+    },
+    {
+        "type": "palladium:laser",
+        "body_part": "head",
+        "glow_color": "#EE1212",
+        "core_color": "#ffffff",
+        "rainbow": false,
+        "glow_opacity": 1,
+        "core_opacity": 1,
+        "bloom": 2,
+        "size": 1,
+        "normal_transparency": false,
+        "rotation": 0,
+        "rotation_speed": 0,
+        "visibility": {
+            "first_person": false,
+            "third_person": true
+        },
+        "offset": [
+            -2,
+            4,
+            0
+        ]
+    },
+    {
+        "type": "palladium:laser",
+        "body_part": "head",
+        "glow_color": "#EE1212",
+        "core_color": "#ffffff",
+        "rainbow": false,
+        "glow_opacity": 1,
+        "core_opacity": 1,
+        "bloom": 2,
+        "size": 0.5,
+        "normal_transparency": false,
+        "rotation": 0,
+        "rotation_speed": 0,
+        "visibility": {
+            "first_person": true,
+            "third_person": false
+        },
+        "offset": [
+            2,
+            5,
+            1
+        ]
+    },
+    {
+        "type": "palladium:laser",
+        "body_part": "head",
+        "glow_color": "#EE1212",
+        "core_color": "#ffffff",
+        "rainbow": false,
+        "glow_opacity": 1,
+        "core_opacity": 1,
+        "bloom": 2,
+        "size": 0.5,
+        "normal_transparency": false,
+        "rotation": 0,
+        "rotation_speed": 0,
+        "visibility": {
+            "first_person": true,
+            "third_person": false
+        },
+        "offset": [
+            -2,
+            5,
+            0
+        ]
+    }
+]

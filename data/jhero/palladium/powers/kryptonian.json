@@ -1,0 +1,442 @@
+{
+    "name": "Kryptonian",
+    "persistent_data": true,
+    "background": "minecraft:textures/block/white_wool.png",
+    "icon": "jhero:textures/icons/kryptonian.png",
+    "gui_display_type": "tree",
+    "energy_bars": {
+        "energy_bar_kryp": {
+            "max": 10000,
+            "auto_increase_per_tick": 5,
+            "auto_increase_interval": 20,
+            "color": "#EE1212"
+        }
+    },
+    "abilities": {
+        "laser_eyes": {
+            "type": "palladium:energy_beam",
+            "icon": "jhero:textures/icons/laser.png",
+            "title": "Laser Eyes",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 0,
+            "gui_position": [
+                1,
+                0
+            ],
+            "description": "Shoot out a laser beam from your eyes",
+            "energy_beam": "jhero:kryptonian_laser",
+            "damage_type": "null",
+            "damage": 7,
+            "max_distance": 25,
+            "speed": 0.5,
+            "energy_bar_usage": {
+                "energy_bar": "energy_bar_kryp",
+                "amount": 10
+            },
+            "set_on_fire_seconds": 0,
+            "cause_fire": false,
+            "smelt_blocks": false,
+            "commands_on_block_hit": [],
+            "commands_on_entity_hit": [],
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:held",
+                        "cooldown": 100,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false
+                    }
+                ],
+                "unlocking": {
+                    "type": "palladium:energy_bar",
+                    "energy_bar": "energy_bar_kryp",
+                    "min": 10
+                }
+            }
+        },
+        "armor": {
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:iron_chestplate",
+            "title": "Armor",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": [
+                1,
+                2
+            ],
+            "description": "Adds extra armor to the player",
+            "attribute": "minecraft:generic.armor",
+            "amount": 7,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [],
+                "unlocking": {
+                    "type": "palladium:energy_bar",
+                    "energy_bar": "energy_bar_kryp",
+                    "min": 10
+                }
+            }
+        },
+        "strong": {
+            "type": "palladium:attribute_modifier",
+            "icon": "jhero:textures/icons/strength.png",
+            "title": "Strength",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": [
+                2,
+                0
+            ],
+            "description": "Gives player extra strength",
+            "attribute": "minecraft:generic.attack_damage",
+            "amount": 5,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [],
+                "unlocking": {
+                    "type": "palladium:energy_bar",
+                    "energy_bar": "energy_bar_kryp",
+                    "min": 10
+                }
+            }
+        },
+        "flying": {
+            "type": "palladium:attribute_modifier",
+            "icon": "jhero:textures/icons/flight.png",
+            "title": "Flight",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": -1,
+            "gui_position": [
+                1,
+                1
+            ],
+            "description": "Allows you to fly!",
+            "attribute": "palladium:flight_speed",
+            "amount": 1.5,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [],
+                "unlocking": {
+                    "type": "palladium:energy_bar",
+                    "energy_bar": "energy_bar_kryp",
+                    "min": 10
+                }
+            }
+        },
+        "flight_type": {
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:iron_chestplate",
+            "title": "Flight again...",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "Change type of flight",
+            "attribute": "palladium:heroic_flight_type",
+            "amount": 1,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [],
+                "unlocking": {
+                    "type": "palladium:energy_bar",
+                    "energy_bar": "energy_bar_kryp",
+                    "min": 10
+                }
+            }
+        },
+        "health": {
+            "type": "palladium:attribute_modifier",
+            "icon": "jhero:textures/icons/health.png",
+            "title": "Health",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": -1,
+            "gui_position": [
+                2,
+                2
+            ],
+            "description": "Gives you extra health!",
+            "attribute": "minecraft:generic.max_health",
+            "amount": 10,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [],
+                "unlocking": {
+                    "type": "palladium:energy_bar",
+                    "energy_bar": "energy_bar_kryp",
+                    "min": 10
+                }
+            }
+        },
+        "rage": {
+            "type": "palladium:attribute_modifier",
+            "icon": "jhero:textures/icons/rage.png",
+            "title": "Rage",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 3,
+            "gui_position": [
+                2,
+                1
+            ],
+            "description": "Get angry, become stronger",
+            "attribute": "palladium:punch_damage",
+            "amount": 6,
+            "operation": 0,
+            "energy_bar_usage": {
+                "energy_bar": "energy_bar_kryp",
+                "amount": 40
+            },
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:activation",
+                        "cooldown": 300,
+                        "ticks": 50,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ],
+                "unlocking": {
+                    "type": "palladium:energy_bar",
+                    "energy_bar": "energy_bar_kryp",
+                    "min": 10
+                }
+            }
+        },
+        "rage_laser": {
+            "type": "palladium:energy_beam",
+            "icon": "jhero:textures/icons/enhanced_laser.png",
+            "title": "Rage Laser",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": false,
+            "list_index": 0,
+            "gui_position": "null",
+            "description": "null",
+            "energy_beam": "jhero:kryptonian_rage_laser",
+            "damage_type": "null",
+            "damage": 14,
+            "max_distance": 30,
+            "speed": 0.5,
+            "set_on_fire_seconds": 5,
+            "cause_fire": true,
+            "smelt_blocks": true,
+            "energy_bar_usage": {
+                "energy_bar": "energy_bar_kryp",
+                "amount": 50
+            },
+            "commands_on_block_hit": [],
+            "commands_on_entity_hit": [],
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:activation",
+                        "cooldown": 300,
+                        "ticks": 100,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ],
+                "unlocking": [
+                    {
+                        "type": "palladium:health",
+                        "min_health": 0,
+                        "max_health": 10
+                    },
+                    {
+                        "type": "palladium:energy_bar",
+                        "energy_bar": "energy_bar_kryp",
+                        "min": 10
+                    }
+                ]
+            }
+        },
+        "immune": {
+            "type": "palladium:damage_immunity",
+            "icon": "minecraft:potion",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "damage_sources": [
+                "minecraft:is_projectile",
+                "minecraft:is_fall",
+                "minecraft:is_fire",
+                "minecraft:is_explosion",
+                "minecraft:is_drowning"
+            ],
+            "conditions": {
+                "enabling": [],
+                "unlocking": {
+                    "type": "palladium:energy_bar",
+                    "energy_bar": "energy_bar_kryp",
+                    "min": 10
+                }
+            }
+        },
+        "freeze_breath": {
+            "type": "palladium:energy_beam",
+            "icon": "jhero:textures/icons/freeze_breath.png",
+            "title": "Freeze Breath",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 1,
+            "gui_position": "null",
+            "description": "Stun an enemy in place with your frost breath",
+            "energy_beam": "jhero:freeze_laser",
+            "damage_type": "null",
+            "damage": 0,
+            "max_distance": 15,
+            "speed": 0.25,
+            "energy_bar_usage": {
+                "energy_bar": "energy_bar_kryp",
+                "amount": 10
+            },
+            "set_on_fire_seconds": 0,
+            "cause_fire": false,
+            "smelt_blocks": false,
+            "commands_on_block_hit": [
+                "fill ~ ~ ~ ~ ~ ~ minecraft:snow"
+            ],
+            "commands_on_entity_hit": [
+                "execute positioned ~ ~ ~ run effect give @e[limit=1,distance=..2] minecraft:slowness 10 10 true"
+            ],
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:held",
+                        "cooldown": 100,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false
+                    }
+                ],
+                "unlocking": [
+                    {
+                        "type": "palladium:not",
+                        "conditions": [
+                            {
+                                "type": "palladium:crouching"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "palladium:energy_bar",
+                        "energy_bar": "energy_bar_kryp",
+                        "min": 10
+                    }
+                ]
+            }
+        },
+        "leap": {
+            "type": "palladium:attribute_modifier",
+            "icon": "jhero:textures/icons/leap.png",
+            "title": "Leap",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 2,
+            "gui_position": [
+                0,
+                2
+            ],
+            "description": "Jump really high!",
+            "attribute": "palladium:jump_power",
+            "amount": 2,
+            "operation": 0,
+            "energy_bar_usage": {
+                "energy_bar": "energy_bar_kryp",
+                "amount": 10
+            },
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:activation",
+                        "cooldown": 50,
+                        "ticks": 20,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ],
+                "unlocking": {
+                    "type": "palladium:energy_bar",
+                    "energy_bar": "energy_bar_kryp",
+                    "min": 10
+                }
+            }
+        },
+        "super_breath": {
+            "type": "palladium:energy_beam",
+            "icon": "jhero:textures/icons/super_breath.png",
+            "title": "Super breath",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 1,
+            "gui_position": [
+                0,
+                3
+            ],
+            "description": "Blow your enemies away with super breath!",
+            "energy_beam": "jhero:super_breath",
+            "damage_type": "null",
+            "damage": 0.01,
+            "max_distance": 30,
+            "speed": 0.5,
+            "energy_bar_usage": {
+                "energy_bar": "energy_bar_kryp",
+                "amount": 10
+            },
+            "set_on_fire_seconds": 0,
+            "cause_fire": false,
+            "smelt_blocks": false,
+            "commands_on_block_hit": [],
+            "commands_on_entity_hit": [],
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:held",
+                        "cooldown": 100,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false
+                    }
+                ],
+                "unlocking": [
+                    {
+                        "type": "palladium:crouching"
+                    },
+                    {
+                        "type": "palladium:energy_bar",
+                        "energy_bar": "energy_bar_kryp",
+                        "min": 10
+                    }
+                ]
+            }
+        }
+    }
+}
