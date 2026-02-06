@@ -1,0 +1,220 @@
+{
+    "name": "Viltrumite",
+    "persistent_data": true,
+    "background": "minecraft:textures/block/white_wool.png",
+    "icon": "minecraft:wither_skeleton_skull",
+    "gui_display_type": "tree",
+    "abilities": {
+        "flight": {
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:feather",
+            "title": "Flight",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "Allows you to defy gravity and fly!",
+            "attribute": "palladium:flight_speed",
+            "amount": 2,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "flight_flex": {
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:iron_chestplate",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "attribute": "palladium:flight_flexibility",
+            "amount": 2,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "strength": {
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:coal",
+            "title": "Strength",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "Increase your strength!",
+            "attribute": "minecraft:generic.attack_damage",
+            "amount": 1,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [],
+                "unlocking": [
+                    {
+                        "type": "palladium:experience_level_buyable",
+                        "xp_level": 3,
+                        "flat_levels": true
+                    }
+                ]
+            }
+        },
+        "rage": {
+            "type": "palladium:attribute_modifier",
+            "icon": "jhero:textures/icons/rage.png",
+            "title": "Rage",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 0,
+            "gui_position": [
+                2,
+                1
+            ],
+            "description": "Get angry, become stronger",
+            "attribute": "palladium:punch_damage",
+            "amount": 8,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:activation",
+                        "cooldown": 500,
+                        "ticks": 250,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ],
+                "unlocking": [
+                    {
+                        "type": "palladium:experience_level_buyable",
+                        "xp_level": 3,
+                        "flat_levels": true
+                    }
+                ]
+            }
+        },
+        "knockback_resistance": {
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:diamond_chestplate",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "attribute": "minecraft:generic.knockback_resistance",
+            "amount": 2,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "health": {
+            "type": "palladium:attribute_modifier",
+            "icon": "jhero:textures/icons/health.png",
+            "title": "health",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "Gives you extra health!",
+            "attribute": "minecraft:generic.max_health",
+            "amount": 6,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "immune": {
+            "type": "palladium:damage_immunity",
+            "icon": "minecraft:potion",
+            "title": "Immunities",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "Makes the player immune to certain things",
+            "damage_sources": [
+                "minecraft:is_explosion",
+                "minecraft:is_fall",
+                "minecraft:is_fire",
+                "minecraft:is_projectile"
+            ],
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "speed": {
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:iron_chestplate",
+            "title": "Speed",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 1,
+            "gui_position": "null",
+            "description": "null",
+            "attribute": "minecraft:generic.movement_speed",
+            "amount": 0.2,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:toggle",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ],
+                "unlocking": []
+            }
+        },
+        "block_step": {
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:iron_chestplate",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "attribute": "forge:step_height_addition",
+            "amount": 1,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [],
+                "unlocking": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "power": "null",
+                        "ability": "speed"
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -120,7 +120,7 @@
                 1,
                 1
             ],
-            "description": "Allows you to fly!",
+            "description": "Allows you to defy gravity and fly!",
             "attribute": "palladium:flight_speed",
             "amount": 1.5,
             "operation": 0,
