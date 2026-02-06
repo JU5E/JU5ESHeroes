@@ -56,7 +56,7 @@
                 }
             }
         },
-        "armor": {
+        "kryp_armor": {
             "type": "palladium:attribute_modifier",
             "icon": "minecraft:iron_chestplate",
             "title": "Armor",
@@ -82,7 +82,7 @@
                 }
             }
         },
-        "strong": {
+        "kryp_strong": {
             "type": "palladium:attribute_modifier",
             "icon": "jhero:textures/icons/strength.png",
             "title": "Strength",
@@ -108,7 +108,7 @@
                 }
             }
         },
-        "flying": {
+        "kryp_flying": {
             "type": "palladium:attribute_modifier",
             "icon": "jhero:textures/icons/flight.png",
             "title": "Flight",
@@ -134,7 +134,7 @@
                 }
             }
         },
-        "flight_type": {
+        "kryp_flight_type": {
             "type": "palladium:attribute_modifier",
             "icon": "minecraft:iron_chestplate",
             "title": "Flight again...",
@@ -157,7 +157,7 @@
                 }
             }
         },
-        "health": {
+        "kryp_health": {
             "type": "palladium:attribute_modifier",
             "icon": "jhero:textures/icons/health.png",
             "title": "Health",
@@ -183,7 +183,7 @@
                 }
             }
         },
-        "rage": {
+        "kryp_rage": {
             "type": "palladium:attribute_modifier",
             "icon": "jhero:textures/icons/rage.png",
             "title": "Rage",
@@ -271,7 +271,7 @@
                 ]
             }
         },
-        "immune": {
+        "kryp_immune": {
             "type": "palladium:damage_immunity",
             "icon": "minecraft:potion",
             "title": "null",
@@ -351,7 +351,7 @@
                 ]
             }
         },
-        "leap": {
+        "kryp_leap": {
             "type": "palladium:attribute_modifier",
             "icon": "jhero:textures/icons/leap.png",
             "title": "Leap",

@@ -5,7 +5,7 @@
     "icon": "minecraft:wither_skeleton_skull",
     "gui_display_type": "tree",
     "abilities": {
-        "flight": {
+        "vil_flight": {
             "type": "palladium:attribute_modifier",
             "icon": "minecraft:feather",
             "title": "Flight",
@@ -24,7 +24,7 @@
                 "unlocking": []
             }
         },
-        "flight_flex": {
+        "vil_flight_flex": {
             "type": "palladium:attribute_modifier",
             "icon": "minecraft:iron_chestplate",
             "title": "null",
@@ -43,7 +43,7 @@
                 "unlocking": []
             }
         },
-        "strength": {
+        "vil_strength": {
             "type": "palladium:attribute_modifier",
             "icon": "minecraft:coal",
             "title": "Strength",
@@ -68,7 +68,7 @@
                 ]
             }
         },
-        "rage": {
+        "vil_rage": {
             "type": "palladium:attribute_modifier",
             "icon": "jhero:textures/icons/rage.png",
             "title": "Rage",
@@ -105,7 +105,7 @@
                 ]
             }
         },
-        "knockback_resistance": {
+        "vil_knockback_resistance": {
             "type": "palladium:attribute_modifier",
             "icon": "minecraft:diamond_chestplate",
             "title": "null",
@@ -124,7 +124,7 @@
                 "unlocking": []
             }
         },
-        "health": {
+        "vil_health": {
             "type": "palladium:attribute_modifier",
             "icon": "jhero:textures/icons/health.png",
             "title": "health",
@@ -143,7 +143,7 @@
                 "unlocking": []
             }
         },
-        "immune": {
+        "vil_immune": {
             "type": "palladium:damage_immunity",
             "icon": "minecraft:potion",
             "title": "Immunities",
@@ -164,7 +164,7 @@
                 "unlocking": []
             }
         },
-        "speed": {
+        "vil_speed": {
             "type": "palladium:attribute_modifier",
             "icon": "minecraft:iron_chestplate",
             "title": "Speed",
@@ -191,7 +191,7 @@
                 "unlocking": []
             }
         },
-        "block_step": {
+        "vil_block_step": {
             "type": "palladium:attribute_modifier",
             "icon": "minecraft:iron_chestplate",
             "title": "null",
