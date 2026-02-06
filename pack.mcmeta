@@ -1,13 +1,8 @@
 {
-    "pack": {
-        "id": "jhero",
-        "pack_format": 15,
-        "description": "A superhero addon for palladium!",
-        "version": "1.0.0"
-    },
-    "dependencies": {
-        "common": {},
-        "fabric": {},
-        "forge": {}
-    }
+  "pack": {
+    "id": "jhero",
+    "description": "A superhero addon for palladium!",
+    "pack_format": 15,
+    "version": "1.0.0.0"
+  }
 }

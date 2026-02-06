@@ -33,7 +33,7 @@
             "speed": 0.5,
             "energy_bar_usage": {
                 "energy_bar": "energy_bar_kryp",
-                "amount": 10
+                "amount": 2
             },
             "set_on_fire_seconds": 0,
             "cause_fire": false,
@@ -49,11 +49,18 @@
                         "needs_empty_hand": false
                     }
                 ],
-                "unlocking": {
-                    "type": "palladium:energy_bar",
-                    "energy_bar": "energy_bar_kryp",
-                    "min": 10
-                }
+                "unlocking": [
+                    {
+                        "type": "palladium:experience_level_buyable",
+                        "xp_level": 3,
+                        "flat_levels": true
+                    },
+                    {
+                        "type": "palladium:energy_bar",
+                        "energy_bar": "energy_bar_kryp",
+                        "min": 10
+                    }
+                ]
             }
         },
         "armor": {
@@ -75,11 +82,18 @@
             "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
             "conditions": {
                 "enabling": [],
-                "unlocking": {
-                    "type": "palladium:energy_bar",
-                    "energy_bar": "energy_bar_kryp",
-                    "min": 10
-                }
+                "unlocking": [
+                    {
+                        "type": "palladium:experience_level_buyable",
+                        "xp_level": 3,
+                        "flat_levels": true
+                    },
+                    {
+                        "type": "palladium:energy_bar",
+                        "energy_bar": "energy_bar_kryp",
+                        "min": 10
+                    }
+                ]
             }
         },
         "strong": {
@@ -101,11 +115,18 @@
             "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
             "conditions": {
                 "enabling": [],
-                "unlocking": {
-                    "type": "palladium:energy_bar",
-                    "energy_bar": "energy_bar_kryp",
-                    "min": 10
-                }
+                "unlocking": [
+                    {
+                        "type": "palladium:experience_level_buyable",
+                        "xp_level": 3,
+                        "flat_levels": true
+                    },
+                    {
+                        "type": "palladium:energy_bar",
+                        "energy_bar": "energy_bar_kryp",
+                        "min": 10
+                    }
+                ]
             }
         },
         "flying": {
@@ -127,11 +148,18 @@
             "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
             "conditions": {
                 "enabling": [],
-                "unlocking": {
-                    "type": "palladium:energy_bar",
-                    "energy_bar": "energy_bar_kryp",
-                    "min": 10
-                }
+                "unlocking": [
+                    {
+                        "type": "palladium:experience_level_buyable",
+                        "xp_level": 3,
+                        "flat_levels": true
+                    },
+                    {
+                        "type": "palladium:energy_bar",
+                        "energy_bar": "energy_bar_kryp",
+                        "min": 10
+                    }
+                ]
             }
         },
         "flight_type": {
@@ -150,11 +178,13 @@
             "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
             "conditions": {
                 "enabling": [],
-                "unlocking": {
-                    "type": "palladium:energy_bar",
-                    "energy_bar": "energy_bar_kryp",
-                    "min": 10
-                }
+                "unlocking": [
+                    {
+                        "type": "palladium:energy_bar",
+                        "energy_bar": "energy_bar_kryp",
+                        "min": 10
+                    }
+                ]
             }
         },
         "health": {
@@ -176,11 +206,18 @@
             "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
             "conditions": {
                 "enabling": [],
-                "unlocking": {
-                    "type": "palladium:energy_bar",
-                    "energy_bar": "energy_bar_kryp",
-                    "min": 10
-                }
+                "unlocking": [
+                    {
+                        "type": "palladium:experience_level_buyable",
+                        "xp_level": 3,
+                        "flat_levels": true
+                    },
+                    {
+                        "type": "palladium:energy_bar",
+                        "energy_bar": "energy_bar_kryp",
+                        "min": 10
+                    }
+                ]
             }
         },
         "rage": {
@@ -215,11 +252,18 @@
                         "allow_scrolling_when_crouching": true
                     }
                 ],
-                "unlocking": {
-                    "type": "palladium:energy_bar",
-                    "energy_bar": "energy_bar_kryp",
-                    "min": 10
-                }
+                "unlocking": [
+                    {
+                        "type": "palladium:experience_level_buyable",
+                        "xp_level": 3,
+                        "flat_levels": true
+                    },
+                    {
+                        "type": "palladium:energy_bar",
+                        "energy_bar": "energy_bar_kryp",
+                        "min": 10
+                    }
+                ]
             }
         },
         "rage_laser": {
@@ -227,11 +271,14 @@
             "icon": "jhero:textures/icons/enhanced_laser.png",
             "title": "Rage Laser",
             "bar_color": "light_gray",
-            "hidden": true,
+            "hidden": false,
             "hidden_in_bar": false,
             "list_index": 0,
-            "gui_position": "null",
-            "description": "null",
+            "gui_position": [
+                1,
+                3
+            ],
+            "description": "Unleash your rage in a powerful burst of laser vision (only able to activate on low health)",
             "energy_beam": "jhero:kryptonian_rage_laser",
             "damage_type": "null",
             "damage": 14,
@@ -258,6 +305,11 @@
                     }
                 ],
                 "unlocking": [
+                    {
+                        "type": "palladium:experience_level_buyable",
+                        "xp_level": 20,
+                        "flat_levels": true
+                    },
                     {
                         "type": "palladium:health",
                         "min_health": 0,
@@ -290,11 +342,18 @@
             ],
             "conditions": {
                 "enabling": [],
-                "unlocking": {
-                    "type": "palladium:energy_bar",
-                    "energy_bar": "energy_bar_kryp",
-                    "min": 10
-                }
+                "unlocking": [
+                    {
+                        "type": "palladium:experience_level_buyable",
+                        "xp_level": 3,
+                        "flat_levels": true
+                    },
+                    {
+                        "type": "palladium:energy_bar",
+                        "energy_bar": "energy_bar_kryp",
+                        "min": 10
+                    }
+                ]
             }
         },
         "freeze_breath": {
@@ -314,7 +373,7 @@
             "speed": 0.25,
             "energy_bar_usage": {
                 "energy_bar": "energy_bar_kryp",
-                "amount": 10
+                "amount": 2
             },
             "set_on_fire_seconds": 0,
             "cause_fire": false,
@@ -335,6 +394,11 @@
                     }
                 ],
                 "unlocking": [
+                    {
+                        "type": "palladium:experience_level_buyable",
+                        "xp_level": 3,
+                        "flat_levels": true
+                    },
                     {
                         "type": "palladium:not",
                         "conditions": [
@@ -383,11 +447,18 @@
                         "allow_scrolling_when_crouching": true
                     }
                 ],
-                "unlocking": {
-                    "type": "palladium:energy_bar",
-                    "energy_bar": "energy_bar_kryp",
-                    "min": 10
-                }
+                "unlocking": [
+                    {
+                        "type": "palladium:experience_level_buyable",
+                        "xp_level": 3,
+                        "flat_levels": true
+                    },
+                    {
+                        "type": "palladium:energy_bar",
+                        "energy_bar": "energy_bar_kryp",
+                        "min": 10
+                    }
+                ]
             }
         },
         "super_breath": {
@@ -410,7 +481,7 @@
             "speed": 0.5,
             "energy_bar_usage": {
                 "energy_bar": "energy_bar_kryp",
-                "amount": 10
+                "amount": 2
             },
             "set_on_fire_seconds": 0,
             "cause_fire": false,
