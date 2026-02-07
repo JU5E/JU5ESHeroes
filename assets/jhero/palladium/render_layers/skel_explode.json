@@ -1,0 +1,5 @@
+{
+    "type": "palladium:skin_overlay",
+    "render_type": "glow",
+    "texture": "jhero:textures/models/skel_explode.png"
+}

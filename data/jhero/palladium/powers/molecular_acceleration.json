@@ -16,6 +16,10 @@
             "gui_position": "null",
             "description": "My entire goddamn skeleton dickhead...",
             "first_tick_commands": [
+                "say I've got one thing left"
+            ],
+            "last_tick_commands": [
+                "say My entire goddamn skeleton dickhead...",
                 "summon minecraft:tnt ~ ~ ~",
                 "summon minecraft:tnt ~ ~ ~",
                 "summon minecraft:tnt ~ ~ ~",
@@ -27,14 +31,12 @@
                 "summon minecraft:tnt ~ ~ ~",
                 "summon minecraft:tnt ~ ~ ~"
             ],
-            "last_tick_commands": [],
             "commands": [],
             "conditions": {
                 "enabling": [
                     {
-                        "type": "palladium:activation",
-                        "cooldown": 500,
-                        "ticks": 20,
+                        "type": "palladium:toggle",
+                        "cooldown": 100,
                         "key_type": "key_bind",
                         "needs_empty_hand": false,
                         "allow_scrolling_when_crouching": true
@@ -53,9 +55,15 @@
             "list_index": -1,
             "gui_position": "null",
             "description": "null",
-            "render_layer": "namespace:render_layer_id",
+            "render_layer": "jhero:skel_explode",
             "conditions": {
-                "enabling": [],
+                "enabling": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "power": "null",
+                        "ability": "explode"
+                    }
+                ],
                 "unlocking": []
             }
         }
