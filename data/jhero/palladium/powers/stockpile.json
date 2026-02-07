@@ -2,19 +2,19 @@
     "name": "Stockpile",
     "persistent_data": true,
     "background": "minecraft:textures/block/white_wool.png",
-    "icon": "minecraft:wither_skeleton_skull",
+    "icon": "jhero:textures/icons/stockpile.png",
     "gui_display_type": "tree",
     "abilities": {
         "full_cowling": {
             "type": "palladium:attribute_modifier",
-            "icon": "minecraft:iron_chestplate",
+            "icon": "jhero:textures/icons/full_cowling.png",
             "title": "Full Cowling",
-            "bar_color": "light_gray",
+            "bar_color": "cyan",
             "hidden": false,
             "hidden_in_bar": false,
-            "list_index": 4,
+            "list_index": 0,
             "gui_position": "null",
-            "description": "Gives player extra strength",
+            "description": "Unleash your stored energy around you increasing speed and strength!",
             "attribute": "minecraft:generic.attack_damage",
             "amount": 6,
             "operation": 0,
@@ -96,7 +96,7 @@
             "gui_position": "null",
             "description": "null",
             "attribute": "minecraft:generic.movement_speed",
-            "amount": 0.1,
+            "amount": 0.2,
             "operation": 0,
             "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
             "conditions": {
@@ -105,6 +105,31 @@
                         "type": "palladium:ability_enabled",
                         "power": "null",
                         "ability": "full_cowling"
+                    }
+                ],
+                "unlocking": []
+            }
+        },
+        "stock_block_assist": {
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:iron_chestplate",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "attribute": "forge:step_height_addition",
+            "amount": 2,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "power": "null",
+                        "ability": "stock_speed"
                     }
                 ],
                 "unlocking": []
@@ -157,6 +182,65 @@
                     }
                 ],
                 "unlocking": []
+            }
+        },
+        "stock_swim_speed": {
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:iron_chestplate",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "attribute": "forge:swim_speed",
+            "amount": 1.5,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "power": "null",
+                        "ability": "full_cowling"
+                    }
+                ],
+                "unlocking": []
+            }
+        },
+        "stock_leap": {
+            "type": "palladium:attribute_modifier",
+            "icon": "jhero:textures/icons/stock_leap.png",
+            "title": "Leap",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 1,
+            "gui_position": "null",
+            "description": "Use your stored energy to propel yourself through the air!",
+            "attribute": "palladium:leaping",
+            "amount": 20,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:activation",
+                        "cooldown": 100,
+                        "ticks": 20,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ],
+                "unlocking": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "power": "null",
+                        "ability": "full_cowling"
+                    }
+                ]
             }
         }
     }
