@@ -9,7 +9,7 @@
             "type": "palladium:command",
             "icon": "minecraft:command_block",
             "title": "Last resort",
-            "bar_color": "light_gray",
+            "bar_color": "orange",
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": -1,
