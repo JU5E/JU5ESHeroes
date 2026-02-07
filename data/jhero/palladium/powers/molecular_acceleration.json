@@ -1,0 +1,63 @@
+{
+    "name": "Molecular Acceleration",
+    "persistent_data": true,
+    "background": "minecraft:textures/block/white_wool.png",
+    "icon": "minecraft:wither_skeleton_skull",
+    "gui_display_type": "tree",
+    "abilities": {
+        "explode": {
+            "type": "palladium:command",
+            "icon": "minecraft:command_block",
+            "title": "Last resort",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "My entire goddamn skeleton dickhead...",
+            "first_tick_commands": [
+                "summon minecraft:tnt ~ ~ ~",
+                "summon minecraft:tnt ~ ~ ~",
+                "summon minecraft:tnt ~ ~ ~",
+                "summon minecraft:tnt ~ ~ ~",
+                "summon minecraft:tnt ~ ~ ~",
+                "summon minecraft:tnt ~ ~ ~",
+                "summon minecraft:tnt ~ ~ ~",
+                "summon minecraft:tnt ~ ~ ~",
+                "summon minecraft:tnt ~ ~ ~",
+                "summon minecraft:tnt ~ ~ ~"
+            ],
+            "last_tick_commands": [],
+            "commands": [],
+            "conditions": {
+                "enabling": [
+                                        {
+                                            "type": "palladium:activation",
+                                            "cooldown": 500,
+                                            "ticks": 20,
+                                            "key_type": "key_bind",
+                                            "needs_empty_hand": false,
+                                            "allow_scrolling_when_crouching": true
+                                        }
+                ],
+                "unlocking": []
+            }
+        },
+        "skeleton": {
+            "type": "palladium:render_layer",
+            "icon": "minecraft:blaze_rod",
+            "title": "Boom Boom skeleton",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "render_layer": "namespace:render_layer_id",
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        }
+    }
+}
