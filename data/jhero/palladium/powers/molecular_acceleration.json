@@ -31,14 +31,14 @@
             "commands": [],
             "conditions": {
                 "enabling": [
-                                        {
-                                            "type": "palladium:activation",
-                                            "cooldown": 500,
-                                            "ticks": 20,
-                                            "key_type": "key_bind",
-                                            "needs_empty_hand": false,
-                                            "allow_scrolling_when_crouching": true
-                                        }
+                    {
+                        "type": "palladium:activation",
+                        "cooldown": 500,
+                        "ticks": 20,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
                 ],
                 "unlocking": []
             }
