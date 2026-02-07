@@ -2,17 +2,10 @@
     "name": "Viltrumite",
     "persistent_data": true,
     "background": "minecraft:textures/block/white_wool.png",
-<<<<<<< HEAD
-    "icon": "minecraft:wither_skeleton_skull",
-    "gui_display_type": "tree",
-    "abilities": {
-        "flight": {
-=======
     "icon": "jhero:textures/icons/viltrumite.png",
     "gui_display_type": "tree",
     "abilities": {
         "vil_flight": {
->>>>>>> stockpile
             "type": "palladium:attribute_modifier",
             "icon": "minecraft:feather",
             "title": "Flight",
@@ -21,11 +14,7 @@
             "hidden_in_bar": true,
             "list_index": -1,
             "gui_position": "null",
-<<<<<<< HEAD
-            "description": "null",
-=======
             "description": "Allows you to defy gravity and fly!",
->>>>>>> stockpile
             "attribute": "palladium:flight_speed",
             "amount": 2,
             "operation": 0,
@@ -35,11 +24,7 @@
                 "unlocking": []
             }
         },
-<<<<<<< HEAD
-        "flight_flex": {
-=======
         "vil_flight_flex": {
->>>>>>> stockpile
             "type": "palladium:attribute_modifier",
             "icon": "minecraft:iron_chestplate",
             "title": "null",
@@ -58,11 +43,7 @@
                 "unlocking": []
             }
         },
-<<<<<<< HEAD
-        "strength": {
-=======
         "vil_strength": {
->>>>>>> stockpile
             "type": "palladium:attribute_modifier",
             "icon": "minecraft:coal",
             "title": "Strength",
@@ -71,21 +52,13 @@
             "hidden_in_bar": true,
             "list_index": -1,
             "gui_position": "null",
-<<<<<<< HEAD
-            "description": "null",
-=======
             "description": "Increase your strength!",
->>>>>>> stockpile
             "attribute": "minecraft:generic.attack_damage",
             "amount": 3,
             "operation": 0,
             "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
             "conditions": {
                 "enabling": [],
-<<<<<<< HEAD
-                "unlocking": []
-            }
-=======
                 "unlocking": [
                     {
                         "type": "palladium:experience_level_buyable",
@@ -242,7 +215,6 @@
                     }
                 ]
             }
->>>>>>> stockpile
         }
     }
 }
