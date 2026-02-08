@@ -166,14 +166,14 @@
         },
         "vil_speed": {
             "type": "palladium:attribute_modifier",
-            "icon": "minecraft:iron_chestplate",
-            "title": "Speed",
+            "icon": "jhero:textures/icons/speed.png",
+            "title": "Sprint",
             "bar_color": "white",
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 1,
             "gui_position": "null",
-            "description": "null",
+            "description": "Run faster!",
             "attribute": "minecraft:generic.movement_speed",
             "amount": 0.2,
             "operation": 0,
@@ -211,7 +211,7 @@
                     {
                         "type": "palladium:ability_enabled",
                         "power": "null",
-                        "ability": "speed"
+                        "ability": "vil_speed"
                     }
                 ]
             }

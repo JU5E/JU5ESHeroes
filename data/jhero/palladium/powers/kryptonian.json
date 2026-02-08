@@ -6,7 +6,7 @@
     "gui_display_type": "tree",
     "energy_bars": {
         "energy_bar_kryp": {
-            "max": 10000,
+            "max": 100000,
             "auto_increase_per_tick": 5,
             "auto_increase_interval": 20,
             "color": "#EE1212"
@@ -17,7 +17,7 @@
             "type": "palladium:energy_beam",
             "icon": "jhero:textures/icons/laser.png",
             "title": "Laser Eyes",
-            "bar_color": "light_gray",
+            "bar_color": "light_blue",
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 0,
@@ -59,6 +59,14 @@
                         "type": "palladium:energy_bar",
                         "energy_bar": "energy_bar_kryp",
                         "min": 10
+                    },
+                    {
+                        "type": "palladium:not",
+                        "conditions": [
+                            {
+                                "type": "palladium:crouching"
+                            }
+                        ]
                     }
                 ]
             }
@@ -224,10 +232,10 @@
             "type": "palladium:attribute_modifier",
             "icon": "jhero:textures/icons/rage.png",
             "title": "Rage",
-            "bar_color": "light_gray",
+            "bar_color": "red",
             "hidden": false,
             "hidden_in_bar": false,
-            "list_index": 3,
+            "list_index": 4,
             "gui_position": [
                 2,
                 1
@@ -270,7 +278,7 @@
             "type": "palladium:energy_beam",
             "icon": "jhero:textures/icons/enhanced_laser.png",
             "title": "Rage Laser",
-            "bar_color": "light_gray",
+            "bar_color": "red",
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 0,
@@ -319,6 +327,9 @@
                         "type": "palladium:energy_bar",
                         "energy_bar": "energy_bar_kryp",
                         "min": 10
+                    },
+                    {
+                        "type": "palladium:crouching"
                     }
                 ]
             }
@@ -360,7 +371,7 @@
             "type": "palladium:energy_beam",
             "icon": "jhero:textures/icons/freeze_breath.png",
             "title": "Freeze Breath",
-            "bar_color": "light_gray",
+            "bar_color": "light_blue",
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 1,
@@ -419,10 +430,10 @@
             "type": "palladium:attribute_modifier",
             "icon": "jhero:textures/icons/leap.png",
             "title": "Leap",
-            "bar_color": "light_gray",
+            "bar_color": "light_blue",
             "hidden": false,
             "hidden_in_bar": false,
-            "list_index": 2,
+            "list_index": 3,
             "gui_position": [
                 0,
                 2
@@ -465,7 +476,7 @@
             "type": "palladium:energy_beam",
             "icon": "jhero:textures/icons/super_breath.png",
             "title": "Super breath",
-            "bar_color": "light_gray",
+            "bar_color": "light_blue",
             "hidden": false,
             "hidden_in_bar": false,
             "list_index": 1,
@@ -507,6 +518,99 @@
                         "min": 10
                     }
                 ]
+            }
+        },
+        "kryp_speed": {
+            "type": "palladium:attribute_modifier",
+            "icon": "jhero:textures/icons/speed.png",
+            "title": "Sprint",
+            "bar_color": "light_blue",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 2,
+            "gui_position": [
+                2,
+                3
+            ],
+            "description": "Run faster!",
+            "attribute": "minecraft:generic.movement_speed",
+            "energy_bar_usage": {
+                "energy_bar": "energy_bar_kryp",
+                "amount": 1
+            },
+            "amount": 0.25,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:toggle",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ],
+                "unlocking": [
+                    {
+                        "type": "palladium:energy_bar",
+                        "energy_bar": "energy_bar_kryp",
+                        "min": 10
+                    },
+                    {
+                        "type": "palladium:experience_level_buyable",
+                        "xp_level": 3,
+                        "flat_levels": true
+                    }
+                ]
+            }
+        },
+        "kryp_block_step": {
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:iron_chestplate",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "attribute": "forge:step_height_addition",
+            "amount": 1,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [],
+                "unlocking": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "power": "null",
+                        "ability": "kryp_speed"
+                    }
+                ]
+            }
+        },
+        "kyp_heal": {
+            "type": "palladium:healing",
+            "icon": "minecraft:apple",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "frequency": 20,
+            "amount": 1,
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:health",
+                        "min_health": 0,
+                        "max_health": 10
+                    }
+                ],
+                "unlocking": []
             }
         }
     }
