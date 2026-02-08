@@ -36,7 +36,8 @@
                 "summon minecraft:tnt ~ ~ ~",
                 "summon minecraft:tnt ~ ~ ~",
                 "summon minecraft:tnt ~ ~ ~",
-                "summon minecraft:tnt ~ ~ ~"
+                "summon minecraft:tnt ~ ~ ~",
+                "effect clear @s"
             ],
             "commands": [],
             "conditions": {
@@ -69,7 +70,8 @@
             "gui_position": "null",
             "description": "Start the process of blowing your self up",
             "first_tick_commands": [
-                "say Sure, but I'm the idiot who took you with me"
+                "say Sure, but I'm the idiot who took you with me",
+                "effect give @s minecraft:slowness 10 3"
             ],
             "last_tick_commands": [],
             "commands": [],
@@ -193,7 +195,7 @@
                 "unlocking": []
             }
         },
-        "enhanced_sprint": {
+        "mol_sprint": {
             "type": "palladium:attribute_modifier",
             "icon": "jhero:textures/icons/speed.png",
             "title": "Sprint",
