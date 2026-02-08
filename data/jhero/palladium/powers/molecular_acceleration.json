@@ -3,10 +3,39 @@
     "name": "Molecular Acceleration",
     "persistent_data": true,
     "background": "minecraft:textures/block/white_wool.png",
-    "icon": "minecraft:wither_skeleton_skull",
+    "icon": "jhero:textures/icons/molecular_acceleration.png",
     "gui_display_type": "tree",
     "item": "minecraft:coal",
     "abilities": {
+        "explode_pre": {
+            "type": "palladium:command",
+            "icon": "jhero:textures/icons/pre_explode.png",
+            "title": "Begining of the end",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": false,
+            "list_index": 4,
+            "gui_position": "null",
+            "description": "Start the process of blowing your self up",
+            "first_tick_commands": [
+                "say but I'm the idiot who took you with me"
+            ],
+            "last_tick_commands": [],
+            "commands": [],
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:activation",
+                        "cooldown": 0,
+                        "ticks": 200,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ],
+                "unlocking": []
+            }
+        },
         "explode": {
             "type": "palladium:command",
             "icon": "jhero:textures/icons/skel_boom.png",
@@ -16,7 +45,7 @@
             "hidden_in_bar": false,
             "list_index": 4,
             "gui_position": "null",
-            "description": "My entire goddamn skeleton dickhead... [WARNING] THIS WILL REMOVE THE POWER",
+            "description": "My entire goddamn skeleton dickhead...",
             "first_tick_commands": [
                 "say I've got one thing left"
             ],
@@ -36,8 +65,7 @@
                 "summon minecraft:tnt ~ ~ ~",
                 "summon minecraft:tnt ~ ~ ~",
                 "summon minecraft:tnt ~ ~ ~",
-                "summon minecraft:tnt ~ ~ ~",
-                "superpower remove jhero:molecular_acceleration"
+                "summon minecraft:tnt ~ ~ ~"
             ],
             "commands": [],
             "conditions": {
@@ -48,6 +76,39 @@
                         "key_type": "key_bind",
                         "needs_empty_hand": false,
                         "allow_scrolling_when_crouching": true
+                    }
+                ],
+                "unlocking": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "power": "null",
+                        "ability": "explode_pre"
+                    }
+                ]
+            }
+        },
+        "explosion_sound": {
+            "type": "palladium:play_sound",
+            "icon": "minecraft:blaze_rod",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "sound": "",
+            "volume": 1,
+            "pitch": 1,
+            "looping": false,
+            "play_self": true,
+            "play_others": true,
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "power": "null",
+                        "ability": "explode"
                     }
                 ],
                 "unlocking": []
@@ -134,7 +195,7 @@
         },
         "enhanced_sprint": {
             "type": "palladium:attribute_modifier",
-            "icon": "minecraft:iron_chestplate",
+            "icon": "jhero:textures/icons/speed.png",
             "title": "Sprint",
             "bar_color": "light_gray",
             "hidden": false,
