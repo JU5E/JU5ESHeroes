@@ -1,0 +1,543 @@
+{
+    "type": "palladium:superpower",
+    "name": "Molecular Acceleration",
+    "persistent_data": true,
+    "background": "minecraft:textures/block/white_wool.png",
+    "icon": "jhero:textures/icons/molecular_acceleration.png",
+    "gui_display_type": "tree",
+    "item": "minecraft:coal",
+    "abilities": {
+        "explode": {
+            "type": "palladium:command",
+            "icon": "jhero:textures/icons/skel_boom.png",
+            "title": "Last resort",
+            "bar_color": "orange",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 4,
+            "gui_position": "null",
+            "description": "My entire goddamn skeleton dickhead...",
+            "first_tick_commands": [
+                "say I've got one thing left"
+            ],
+            "last_tick_commands": [
+                "say My entire goddamn skeleton dickhead...",
+                "summon minecraft:tnt ~ ~ ~",
+                "summon minecraft:tnt ~ ~ ~",
+                "summon minecraft:tnt ~ ~ ~",
+                "summon minecraft:tnt ~ ~ ~",
+                "summon minecraft:tnt ~ ~ ~",
+                "summon minecraft:tnt ~ ~ ~",
+                "summon minecraft:tnt ~ ~ ~",
+                "summon minecraft:tnt ~ ~ ~",
+                "summon minecraft:tnt ~ ~ ~",
+                "summon minecraft:tnt ~ ~ ~",
+                "summon minecraft:tnt ~ ~ ~",
+                "summon minecraft:tnt ~ ~ ~",
+                "summon minecraft:tnt ~ ~ ~",
+                "summon minecraft:tnt ~ ~ ~",
+                "summon minecraft:tnt ~ ~ ~",
+                "effect clear @s"
+            ],
+            "commands": [],
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:toggle",
+                        "cooldown": 100,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ],
+                "unlocking": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "power": "null",
+                        "ability": "explode_pre"
+                    }
+                ]
+            }
+        },
+        "explode_pre": {
+            "type": "palladium:command",
+            "icon": "jhero:textures/icons/pre_explode.png",
+            "title": "Begining of the end",
+            "bar_color": "black",
+            "hidden": true,
+            "hidden_in_bar": false,
+            "list_index": 3,
+            "gui_position": "null",
+            "description": "Start the process of blowing your self up",
+            "first_tick_commands": [
+                "say Sure, but I'm the idiot who took you with me",
+                "effect give @s minecraft:slowness 10 3"
+            ],
+            "last_tick_commands": [],
+            "commands": [],
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:activation",
+                        "cooldown": 0,
+                        "ticks": 200,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ],
+                "unlocking": []
+            }
+        },
+        "explosion_sound": {
+            "type": "palladium:play_sound",
+            "icon": "minecraft:blaze_rod",
+            "title": "null",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "sound": "",
+            "volume": 1,
+            "pitch": 1,
+            "looping": false,
+            "play_self": true,
+            "play_others": true,
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "power": "null",
+                        "ability": "explode"
+                    }
+                ],
+                "unlocking": []
+            }
+        },
+        "skeleton": {
+            "type": "palladium:render_layer",
+            "icon": "minecraft:blaze_rod",
+            "title": "Boom Boom skeleton",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "null",
+            "render_layer": "jhero:skel_explode",
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "power": "null",
+                        "ability": "explode"
+                    }
+                ],
+                "unlocking": []
+            }
+        },
+        "mol_strength": {
+            "type": "palladium:attribute_modifier",
+            "icon": "jhero:textures/icons/strength.png",
+            "title": "Strength",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "Enhanced human strength!",
+            "attribute": "minecraft:generic.attack_damage",
+            "amount": 1,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "mol_armour": {
+            "type": "palladium:attribute_modifier",
+            "icon": "minecraft:iron_chestplate",
+            "title": "Armour",
+            "bar_color": "light_gray",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "Gives you extra armour points",
+            "attribute": "minecraft:generic.armor",
+            "amount": 5,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "mol_health": {
+            "type": "palladium:attribute_modifier",
+            "icon": "jhero:textures/icons/health.png",
+            "title": "Health",
+            "bar_color": "light_gray",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": -1,
+            "gui_position": "null",
+            "description": "Enhanced health!",
+            "attribute": "minecraft:generic.max_health",
+            "amount": 4,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [],
+                "unlocking": []
+            }
+        },
+        "mol_sprint": {
+            "type": "palladium:attribute_modifier",
+            "icon": "jhero:textures/icons/speed.png",
+            "title": "Sprint",
+            "bar_color": "orange",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 2,
+            "gui_position": "null",
+            "description": "Run faster!",
+            "attribute": "minecraft:generic.movement_speed",
+            "amount": 0.1,
+            "operation": 0,
+            "uuid": "498be4fb-af04-42f2-8948-e6ccdc0d99e1",
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:toggle",
+                        "cooldown": 0,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ],
+                "unlocking": []
+            }
+        },
+        "pro": {
+            "type": "palladium:projectile",
+            "icon": "jhero:textures/icons/explosion.png",
+            "title": "Item Explode",
+            "bar_color": "orange",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 0,
+            "gui_position": "null",
+            "description": "Throw an explosive projectile! Consumes coal from your hand.",
+            "entity_type": "minecraft:fireball",
+            "entity_data": "null",
+            "inaccuracy": 0,
+            "velocity": 1.75,
+            "swinging_arm": "main_arm",
+            "damage_from_player": false,
+            "ignore_player_movement": false,
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:action",
+                        "cooldown": 15,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ],
+                "unlocking": [
+                    {
+                        "type": "palladium:or",
+                        "conditions": [
+                            {
+                                "type": "palladium:command_result",
+                                "command": "execute if entity @s[nbt={SelectedItem:{id:\"minecraft:coal\"}}]"
+                            },
+                            {
+                                "type": "palladium:command_result",
+                                "command": "execute if entity @s[nbt={SelectedItem:{id:\"minecraft:iron_ingot\"}}]"
+                            },
+                            {
+                                "type": "palladium:command_result",
+                                "command": "execute if entity @s[nbt={SelectedItem:{id:\"minecraft:dirt\"}}]"
+                            },
+                            {
+                                "type": "palladium:command_result",
+                                "command": "execute if entity @s[nbt={SelectedItem:{id:\"minecraft:cobblestone\"}}]"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "coal_rem": {
+            "type": "palladium:command",
+            "icon": "minecraft:tnt",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": 0,
+            "title": "Item Explode",
+            "bar_color": "orange",
+            "description": "Null",
+            "first_tick_commands": [
+                "clear @s minecraft:coal 1"
+            ],
+            "commands": [],
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:command_result",
+                        "command": "execute if entity @s[nbt={SelectedItem:{id:\"minecraft:coal\"}}]"
+                    }
+                ],
+                "unlocking": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "power": "null",
+                        "ability": "pro"
+                    },
+                    {
+                        "type": "palladium:command_result",
+                        "command": "execute if entity @s[nbt={SelectedItem:{id:\"minecraft:coal\"}}]"
+                    }
+                ]
+            }
+        },
+        "iron_rem": {
+            "type": "palladium:command",
+            "icon": "minecraft:tnt",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": 0,
+            "title": "Item Explode",
+            "bar_color": "orange",
+            "description": "Null",
+            "first_tick_commands": [
+                "clear @s minecraft:iron_ingot 1"
+            ],
+            "commands": [],
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:command_result",
+                        "command": "execute if entity @s[nbt={SelectedItem:{id:\"minecraft:iron_ingot\"}}]"
+                    }
+                ],
+                "unlocking": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "power": "null",
+                        "ability": "pro"
+                    },
+                    {
+                        "type": "palladium:command_result",
+                        "command": "execute if entity @s[nbt={SelectedItem:{id:\"minecraft:iron_ingot\"}}]"
+                    }
+                ]
+            }
+        },
+        "dirt_rem": {
+            "type": "palladium:command",
+            "icon": "minecraft:tnt",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": 0,
+            "title": "Item Explode",
+            "bar_color": "orange",
+            "description": "Null",
+            "first_tick_commands": [
+                "clear @s minecraft:dirt 2"
+            ],
+            "commands": [],
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:command_result",
+                        "command": "execute if entity @s[nbt={SelectedItem:{id:\"minecraft:dirt\"}}]"
+                    }
+                ],
+                "unlocking": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "power": "null",
+                        "ability": "pro"
+                    },
+                    {
+                        "type": "palladium:command_result",
+                        "command": "execute if entity @s[nbt={SelectedItem:{id:\"minecraft:dirt\"}}]"
+                    }
+                ]
+            }
+        },
+        "cobble_rem": {
+            "type": "palladium:command",
+            "icon": "minecraft:tnt",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": 0,
+            "title": "Item Explode",
+            "bar_color": "orange",
+            "description": "Null",
+            "first_tick_commands": [
+                "clear @s minecraft:cobblestone 2"
+            ],
+            "commands": [],
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:command_result",
+                        "command": "execute if entity @s[nbt={SelectedItem:{id:\"minecraft:cobblestone\"}}]"
+                    }
+                ],
+                "unlocking": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "power": "null",
+                        "ability": "pro"
+                    },
+                    {
+                        "type": "palladium:command_result",
+                        "command": "execute if entity @s[nbt={SelectedItem:{id:\"minecraft:cobblestone\"}}]"
+                    }
+                ]
+            }
+        },
+        "mega_boom": {
+            "type": "palladium:command",
+            "icon": "jhero:textures/icons/mega_boom.png",
+            "title": "Mega Item Explosion",
+            "bar_color": "orange",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 1,
+            "gui_position": "null",
+            "description": "Create a giant explosion, at the expense of a valuable resource",
+            "first_tick_commands": [
+                "summon minecraft:tnt ^ ^ ^10",
+                "summon minecraft:tnt ^ ^ ^10",
+                "summon minecraft:tnt ^ ^ ^10"
+            ],
+            "last_tick_commands": [],
+            "commands": [],
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:action",
+                        "cooldown": 100,
+                        "key_type": "key_bind",
+                        "needs_empty_hand": false,
+                        "allow_scrolling_when_crouching": true
+                    }
+                ],
+                "unlocking": [
+                    {
+                        "type": "palladium:or",
+                        "conditions": [
+                            {
+                                "type": "palladium:command_result",
+                                "command": "execute if entity @s[nbt={SelectedItem:{id:\"palladium:raw_titanium\"}}]"
+                            },
+                            {
+                                "type": "palladium:command_result",
+                                "command": "execute if entity @s[nbt={SelectedItem:{id:\"minecraft:diamond\"}}]"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "diamond_rem": {
+            "type": "palladium:command",
+            "icon": "minecraft:tnt",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": 0,
+            "title": "Item Explode",
+            "bar_color": "orange",
+            "description": "Null",
+            "first_tick_commands": [
+                "clear @s minecraft:diamond 2"
+            ],
+            "commands": [],
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:command_result",
+                        "command": "execute if entity @s[nbt={SelectedItem:{id:\"minecraft:diamond\"}}]"
+                    }
+                ],
+                "unlocking": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "power": "null",
+                        "ability": "mega_boom"
+                    },
+                    {
+                        "type": "palladium:command_result",
+                        "command": "execute if entity @s[nbt={SelectedItem:{id:\"minecraft:diamond\"}}]"
+                    }
+                ]
+            }
+        },
+        "titanium_rem": {
+            "type": "palladium:command",
+            "icon": "minecraft:tnt",
+            "hidden": true,
+            "hidden_in_bar": true,
+            "list_index": 0,
+            "title": "Item Explode",
+            "bar_color": "orange",
+            "description": "Null",
+            "first_tick_commands": [
+                "clear @s palladium:raw_titanium 1"
+            ],
+            "commands": [],
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:command_result",
+                        "command": "execute if entity @s[nbt={SelectedItem:{id:\"palladium:raw_titanium\"}}]"
+                    }
+                ],
+                "unlocking": [
+                    {
+                        "type": "palladium:ability_enabled",
+                        "power": "null",
+                        "ability": "mega_boom"
+                    },
+                    {
+                        "type": "palladium:command_result",
+                        "command": "execute if entity @s[nbt={SelectedItem:{id:\"palladium:raw_titanium\"}}]"
+                    }
+                ]
+            }
+        },
+        "mol_heal": {
+            "type": "palladium:healing",
+            "icon": "jhero:textures/icons/health.png",
+            "title": "Heal",
+            "bar_color": "red",
+            "hidden": false,
+            "hidden_in_bar": false,
+            "list_index": 1,
+            "gui_position": "null",
+            "description": "Don't die heal your self!",
+            "frequency": 20,
+            "amount": 1,
+            "conditions": {
+                "enabling": [
+                    {
+                        "type": "palladium:health",
+                        "min_health": 0,
+                        "max_health": 11
+                    }
+                ],
+                "unlocking": []
+            }
+        }
+    }
+}
