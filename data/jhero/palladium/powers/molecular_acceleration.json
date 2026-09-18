@@ -109,7 +109,6 @@
                 "enabling": [
                     {
                         "type": "palladium:ability_enabled",
-                        "power": "null",
                         "ability": "explode"
                     }
                 ],
